@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,7 +20,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 62.5%;
-    font: inherit;
+    font-family: Roboto;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -40,4 +45,39 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+.container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__title {
+    font-size: 6rem;
+    margin: 0 0 6rem 0;
+    text-align: center;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__menu--item {
+    font-size: 3rem;
+    margin: 0 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #c59d5f;
+    border-radius: .6rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #c59d5f;
 }
