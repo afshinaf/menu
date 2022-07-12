@@ -1,12 +1,8 @@
-@font-face {
-    font-family: Roboto;
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
-}
-
 :root {
     --gold: #c59d5f;
     --white: #fff;
-    --radius: 0.5rem;
+    --grey: hsl(210, 22%, 49%);
+    --radius: 0.8rem;
     --transition: all 0.3s linear;
 }
 
@@ -27,7 +23,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 62.5%;
-    font-family: Roboto, monospace;
+    font-family: sans-serif;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -54,9 +50,10 @@ table {
 }
 
 .container {
-    width: 80%;
-    height: 50vh;
+    width: 70%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -65,6 +62,7 @@ table {
 .header {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .header__title {
@@ -76,6 +74,7 @@ table {
 .header__menu {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .header__menu--item {
@@ -93,4 +92,72 @@ table {
     background-color: var(--gold);
     color: var(--white);
     transition: var(--transition);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 0 0 0;
+    width: 100%;
+}
+
+.menu__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 2rem 0;
+}
+
+.menu__row--item {
+    width: 49%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item__image {
+    width: 40%;
+    border: 6px solid var(--gold);
+    border-radius: var(--radius);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.item__image img {
+    width: 100%;
+}
+
+.item__text {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+.item__text--title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 2rem 0;
+    padding: 0 0 1rem 0;
+    border-bottom: 2px dotted var(--gold);
+}
+
+.item__text--title h4 {
+    font-size: 3rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.item__text--price {
+    color: var(--gold);
+    font-weight: 900;
+}
+
+.item__text--description p {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: justify;
+    color: var(--grey);
 }
