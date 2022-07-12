@@ -161,3 +161,8 @@ table {
     text-align: justify;
     color: var(--grey);
 }
+
+.item__text--description p::selection {
+    background-color: var(--gold);
+    color: var(--white);
+}
