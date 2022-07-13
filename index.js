@@ -78,5 +78,36 @@ const menu = [
         price: 22.99,
         img: "./images/item-10.jpeg",
         desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
-    },
+    }
 ];
+
+// const breakfast = menu.filter(item => item.category === 'breakfast')
+// console.log("breakfast", breakfast)
+
+const menuSection = document.querySelector('.menu')
+
+const showFilteredMenu = (menu) => {
+    let menuItems = menu.map(item => (
+        `<article class="menu__item">
+            <div class="menu__item--image">
+                <img src=${item.img} alt=${item.title} />
+            </div>
+            <div class="menu__item--text">
+                <div class="item__text--title">
+                    <h4> ${item.title} </h4>
+                    <h4 class="item__text--price"> ${item.price} </h4>
+                </div>
+                <div class="item__text--description">
+                    <p> ${item.desc} </p>
+                </div>
+            </div>
+        </article>`
+    ))
+    menuItems = menuItems.join('');
+    menuSection.innerHTML = menuItems;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    console.log('afshin')
+    showFilteredMenu(menu);
+});
